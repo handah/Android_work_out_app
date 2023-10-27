@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        android:title="Account Preferences">
+
+        <Preference
+            android:key="profileKey"
+            app:iconSpaceReserved="false"
+            android:title="Name, Email, Class, etc."
+            android:summary="User Profile">
+            <intent android:action="com.example.handa_huang_myruns2.profile"/>
+        </Preference>
+
+
+        <CheckBoxPreference
+            android:key="privacyCheck"
+            app:iconSpaceReserved="false"
+            android:title="Privacy Setting"
+            android:summary="Posting your records anonymously" />
+
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        android:title="Additional Settings">
+
+
+        <ListPreference
+            android:key="unitpreferencelist"
+            app:iconSpaceReserved="false"
+            android:title="Unit Preference"
+            android:summary="Select the units"
+            android:defaultValue="Miles"
+            android:entries="@array/unit_preference_entry"
+            android:entryValues="@array/unit_preference_entry"
+            android:dialogTitle="Unit Preference">
+
+        </ListPreference>
+
+        <EditTextPreference
+            app:iconSpaceReserved="false"
+            android:key="comments"
+            android:title="Comments"
+            android:summary="Please enter your comments"
+            android:dialogTitle="Comments">
+        </EditTextPreference>
+
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        android:title="Misc.">
+
+        <Preference
+            android:key="webKey"
+            app:iconSpaceReserved="false"
+            android:title="Webpage"
+            android:summary="https://www.sfu.ca/computing.html">
+            <intent
+                android:data="https://www.sfu.ca/computing.html">
+
+            </intent>
+        </Preference>
+
+    </PreferenceCategory>
+
+
+</androidx.preference.PreferenceScreen>
